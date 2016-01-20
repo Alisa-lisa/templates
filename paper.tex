@@ -1,0 +1,93 @@
+\documentclass[
+  twoside,
+  11pt, a4paper,
+  footinclude=true,
+  headinclude=true,
+  cleardoublepage=empty
+]{scrreprt}
+\usepackage{lipsum}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{listings}
+\usepackage{lmodern}
+\usepackage{float}
+\usepackage{sidecap}
+\usepackage{todonotes}
+\usepackage{siunitx}
+\usepackage{acronym}
+\usepackage{setspace}
+\usepackage[customcolors]{hf-tikz}
+\usepackage{csquotes}
+\usepackage[T1]{fontenc}
+\hypersetup{urlbordercolor={1 1 1}}
+
+\begin{document}
+% Title -------------------------------------------------------------------
+    \begin{titlepage}
+        \begin{center}
+            \vspace{2.5cm}
+            
+            \LARGE
+            \textbf{Implementation of the METHOD}
+            
+            \vspace{2.5cm}
+            
+            \normalsize
+            Solution for the "Name" Kaggle competition
+
+            
+            \vspace{0.6cm}
+
+            by
+
+            \vspace{0.6cm}
+            
+            \large
+            \textbf{Alisa Dammer}\\
+            
+        \end{center}
+    \end{titlepage}
+% Title -------------------------------------------------------------------
+
+% Abstract ----------------------------------------------------------------
+    \chapter*{Abstract}
+        \onehalfspace
+        This paper describes the particular implementation of a method to build a prediction for Kaggle competition.
+        \singlespace
+% Abstract ----------------------------------------------------------------
+
+% Table of contents -------------------------------------------------------
+    \tableofcontents
+% Table of comtents -------------------------------------------------------
+
+% Main Body ---------------------------------------------------------------
+    \chapter{Introduction}
+        \section{Possible Algorithms}
+            Here other possible solutions will be described \cite{wiki:latex}.
+        \section{Chosen Algorithm}
+            Here the chosen algorithm will be described and explained why it was chosen.
+         
+    \chapter{Implementation}
+        Here the implementation of the solution will be explained in details.
+        
+    \chapter{Results}
+        \section{Performance}
+            Performance and memory testing.
+        \section{Accuracy}
+            Test predictions. MSE, MRSE, etc..
+        \section{Possible Improvements}
+            Implementation tricks, algorithmic improvement.  
+% Main Body ---------------------------------------------------------------
+
+% Bibliography ------------------------------------------------------------
+    \chapter{Literature}
+        
+        \bibliographystyle{unsrt}
+        \bibliography{library}
+% Bibliography ------------------------------------------------------------
+
+\end{document}
