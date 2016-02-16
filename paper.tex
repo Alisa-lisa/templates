@@ -7,23 +7,34 @@
 ]{scrreprt}
 \usepackage{lipsum}
 \usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
-\usepackage{mathtools}
+\usepackage[ngerman,english]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
 \usepackage{graphicx}
-\usepackage{hyperref}
-\usepackage{url}
-\usepackage{listings}
+\usepackage{caption}
+\usepackage[x11names]{xcolor}
 \usepackage{lmodern}
 \usepackage{float}
 \usepackage{sidecap}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{tabularcalc}
 \usepackage{todonotes}
+\usepackage{hyperref}
+\usepackage{minted}
 \usepackage{siunitx}
 \usepackage{acronym}
+\usepackage{subfig}
+\usepackage{tabularx}
 \usepackage{setspace}
 \usepackage[customcolors]{hf-tikz}
+\usepackage{url}
 \usepackage{csquotes}
+\usepackage{booktabs}
 \usepackage[T1]{fontenc}
-\hypersetup{urlbordercolor={1 1 1}}
+\usepackage{biblatex}
+\addbibresource{library.bib}
+\pgfplotsset{compat=1.12}
 
 \begin{document}
 % Title -------------------------------------------------------------------
@@ -68,11 +79,25 @@
     \chapter{Introduction}
         \section{Possible Algorithms}
             Here other possible solutions will be described \cite{wiki:latex}.
+            \begin{description}
+                \item[Algo1] Some text that describes an algorithm
+                \item[Algo2] Some text that describes an algorithm
+                \item[Algo3] Some text that describes an algorithm
+            \end{description}
         \section{Chosen Algorithm}
             Here the chosen algorithm will be described and explained why it was chosen.
          
     \chapter{Implementation}
         Here the implementation of the solution will be explained in details.
+        % Figure ----------------------------------------------------------
+        \begin{figure}[h]
+            \includegraphics[scale=0.5]{example.png}
+            \centering
+            \caption{Example Figure}
+            \label{fig:example01}
+        \end{figure}
+        % Figure ----------------------------------------------------------
+        
         
     \chapter{Results}
         \section{Performance}
@@ -83,11 +108,15 @@
             Implementation tricks, algorithmic improvement.  
 % Main Body ---------------------------------------------------------------
 
+% List of figures
+    \listoffigures
+% List of figures
+
 % Bibliography ------------------------------------------------------------
     \chapter{Literature}
-        
-        \bibliographystyle{unsrt}
-        \bibliography{library}
+        \printbibliography
+        %\bibliographystyle{unsrt}
+        %\bibliography{library}
 % Bibliography ------------------------------------------------------------
 
 \end{document}
